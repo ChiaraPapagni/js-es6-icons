@@ -111,26 +111,28 @@ const icons =
         }
     ];
 
-icons.forEach((icon, i) => {
+
+icons.forEach((icon) => {
+
+    let iconTypeClass;
+
+    //controllo tipo icona 
+    //in base alla quale assegno una classe CSS 
+    //alla variabile iconTypeClass
+    if (icon.type == 'animal') {
+        iconTypeClass = 'blue';
+    } else if (icon.type == 'vegetable') {
+        iconTypeClass = 'orange';
+    } else if (icon.type == 'user') {
+        iconTypeClass = 'purple';
+    }
+
+    //creo elemento
     const el = `
         <div class="card">
-            <i class="icon ${icon.family} ${icon.prefix}${icon.name}"></i>
+            <i class="${iconTypeClass} ${icon.family} ${icon.prefix}${icon.name}"></i>
             <p>${icon.name}</p>
         </div>`;
 
-    if (icon.type == 'animal') {
-        //this.type.classList.add('blue');
-        //this.type.style.color = "#00FF00"
-        console.log(this.type);
-    } else if (icon.type == 'vegetable') {
-        //console.log(icon.type);
-    } else if (icon.type == 'user') {
-        //console.log(this.type);
-    }
-
     document.querySelector('.container').insertAdjacentHTML('beforeend', el);
 });
-
-
-/* */
-

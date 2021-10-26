@@ -15,8 +15,10 @@ body {
 }
 
 h1 {
+    font-family: 'Acme',
+        sans-serif;
     color: #29B1DD;
-    padding: 1rem 0 0 1rem;
+    padding: 0.5rem 0 0 1rem;
 }
 
 .blue {

@@ -111,3 +111,11 @@ const icons =
         }
     ];
 
+icons.forEach((icon) => {
+    const el = `
+        <div class="card">
+            <i class="${icon.family} ${icon.prefix}${icon.name}"></i>
+            <p>${icon.name}</p>
+        </div>`;
+    document.querySelector('.container').insertAdjacentHTML('beforeend', el);
+});

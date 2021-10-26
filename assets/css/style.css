@@ -51,3 +51,38 @@ nav {
 nav>p {
     margin-right: 1rem;
 }
+
+/****************
+Main
+****************/
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.container::after {
+    content: "";
+    flex: auto;
+}
+
+.card {
+    width: calc(100% / 6);
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 1px 1px 2px grey;
+    margin: 1.5rem 0.5rem;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.card i {
+    font-size: 2rem;
+}
+
+.card p {
+    margin-top: 0.3rem;
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}

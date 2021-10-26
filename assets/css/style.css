@@ -4,3 +4,50 @@
     margin: 0;
     padding: 0;
 }
+
+/****************
+Utility
+****************/
+body {
+    background-color: #DDDDDD;
+    font-family: Arial, Helvetica,
+        sans-serif
+}
+
+h1 {
+    color: #29B1DD;
+    padding: 1rem 0 0 1rem;
+}
+
+.blue {
+    color: #0000FF;
+}
+
+.orange {
+    color: #FFA500;
+}
+
+.purple {
+    color: #800080;
+}
+
+/****************
+Header
+****************/
+header {
+    background-color: #FFFFFF;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #29B1DD;
+    padding: 1rem;
+    color: #FFFFFF;
+    text-transform: uppercase;
+}
+
+nav>p {
+    margin-right: 1rem;
+}

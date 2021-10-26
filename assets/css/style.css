@@ -66,6 +66,10 @@ Main
     flex: auto;
 }
 
+.container>div:last-child {
+    margin-left: 1rem;
+}
+
 .card {
     width: calc(100% / 6);
     background-color: #FFFFFF;

@@ -111,11 +111,26 @@ const icons =
         }
     ];
 
-icons.forEach((icon) => {
+icons.forEach((icon, i) => {
     const el = `
         <div class="card">
-            <i class="${icon.family} ${icon.prefix}${icon.name}"></i>
+            <i class="icon ${icon.family} ${icon.prefix}${icon.name}"></i>
             <p>${icon.name}</p>
         </div>`;
+
+    if (icon.type == 'animal') {
+        //this.type.classList.add('blue');
+        //this.type.style.color = "#00FF00"
+        console.log(this.type);
+    } else if (icon.type == 'vegetable') {
+        //console.log(icon.type);
+    } else if (icon.type == 'user') {
+        //console.log(this.type);
+    }
+
     document.querySelector('.container').insertAdjacentHTML('beforeend', el);
 });
+
+
+/* */
+

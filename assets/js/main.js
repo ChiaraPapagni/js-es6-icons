@@ -136,3 +136,24 @@ icons.forEach((icon) => {
 
     document.querySelector('.container').insertAdjacentHTML('beforeend', el);
 });
+
+
+//Ascolto il cambiamento di valore sulla select ed eseguo la funzione
+document.getElementById("type").onchange = checkType;
+
+function checkType() {
+
+    //Controllo tipo scelto
+    if (type.value == 'animal') {
+        console.log(this.value);
+    } else if (type.value == 'vegetable') {
+        console.log(this.value);
+    } else if (type.value == 'user') {
+        console.log(this.value);
+    } else {
+        console.log(this.value);
+    }
+    //document.body.style.background = "blue";
+    //style.display = "none";
+
+}

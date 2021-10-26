@@ -115,7 +115,6 @@ const icons =
 icons.forEach((icon) => {
 
     let iconTypeClass;
-
     //controllo tipo icona 
     //in base alla quale assegno una classe CSS 
     //alla variabile iconTypeClass
@@ -146,14 +145,16 @@ function checkType() {
     //Controllo tipo scelto
     if (type.value == 'animal') {
         console.log(this.value);
+        document.querySelector('.orange').style.display = "none";
+
     } else if (type.value == 'vegetable') {
         console.log(this.value);
+
     } else if (type.value == 'user') {
         console.log(this.value);
+
     } else {
         console.log(this.value);
     }
-    //document.body.style.background = "blue";
     //style.display = "none";
-
 }

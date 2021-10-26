@@ -112,49 +112,42 @@ const icons =
     ];
 
 
-icons.forEach((icon) => {
+function renderIcons() {
 
-    let iconTypeClass;
-    //controllo tipo icona 
-    //in base alla quale assegno una classe CSS 
-    //alla variabile iconTypeClass
-    if (icon.type == 'animal') {
-        iconTypeClass = 'blue';
-    } else if (icon.type == 'vegetable') {
-        iconTypeClass = 'orange';
-    } else if (icon.type == 'user') {
-        iconTypeClass = 'purple';
-    }
+    document.querySelector('.container').innerHTML = '';
 
-    //creo elemento
-    const el = `
-        <div class="card">
-            <i class="${iconTypeClass} ${icon.family} ${icon.prefix}${icon.name}"></i>
-            <p>${icon.name}</p>
-        </div>`;
+    icons.forEach((icon) => {
+        if (
+            document.getElementById("type").value == icon.type ||
+            document.getElementById("type").value == 'all'
+        ) {
 
-    document.querySelector('.container').insertAdjacentHTML('beforeend', el);
-});
+            let iconTypeClass = '';
+            //controllo tipo icona 
+            //in base alla quale assegno una classe CSS 
+            //alla variabile iconTypeClass
+            if (icon.type == 'animal') {
+                iconTypeClass = 'blue';
+            } else if (icon.type == 'vegetable') {
+                iconTypeClass = 'orange';
+            } else if (icon.type == 'user') {
+                iconTypeClass = 'purple';
+            }
 
+            //creo elemento
+            const el = `
+            <div class="card">
+                <i class="${iconTypeClass} ${icon.family} ${icon.prefix}${icon.name}"></i>
+                <p>${icon.name}</p>
+            </div>`;
+
+            document.querySelector('.container').innerHTML += el;
+        }
+    });
+
+}
+
+renderIcons();
 
 //Ascolto il cambiamento di valore sulla select ed eseguo la funzione
-document.getElementById("type").onchange = checkType;
-
-function checkType() {
-
-    //Controllo tipo scelto
-    if (type.value == 'animal') {
-        console.log(this.value);
-        document.querySelector('.orange').style.display = "none";
-
-    } else if (type.value == 'vegetable') {
-        console.log(this.value);
-
-    } else if (type.value == 'user') {
-        console.log(this.value);
-
-    } else {
-        console.log(this.value);
-    }
-    //style.display = "none";
-}
+document.getElementById("type").onchange = renderIcons;

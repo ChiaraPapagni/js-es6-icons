@@ -60,16 +60,10 @@ Main
 .container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-.container::after {
-    content: "";
-    flex: auto;
-}
-
-.container>div:last-child {
-    margin-left: 1rem;
+    justify-content: center;
+    gap: 35px;
+    margin-top: 1rem;
+    padding: 1rem;
 }
 
 .card {
@@ -77,7 +71,7 @@ Main
     background-color: #FFFFFF;
     border-radius: 10px;
     box-shadow: 1px 1px 2px grey;
-    margin: 1.5rem 0.5rem;
+    margin-top: 1rem;
     padding: 1rem 0;
     text-align: center;
 }
